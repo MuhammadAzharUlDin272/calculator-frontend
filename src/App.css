@@ -1,0 +1,237 @@
+body {
+  background-color: #96E0F8;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  /* Width of the thumb */
+  height: 20px;
+  /* Height of the thumb */
+  background: #ffffff;
+  /* White color for the thumb */
+  border: 1px solid #000000;
+  /* Thin black border */
+  border-radius: 50%;
+  /* Circular shape for the thumb */
+  cursor: pointer;
+  /* Cursor style */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 30px;
+  /* Width of the thumb */
+  height: 30px;
+  /* Height of the thumb */
+  background: #ffffff;
+  /* White color for the thumb */
+  border: 1px solid #000000;
+  /* Thin black border */
+  border-radius: 50%;
+  /* Circular shape for the thumb */
+  cursor: pointer;
+  /* Cursor style */
+}
+
+/* Add this CSS to your stylesheet or component */
+@keyframes rocketTakeoff {
+  0% {
+    transform: translateY(50%) translateX(-50%);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(50%) rotate(40deg);
+  }
+
+  100% {
+    transform: translateY(-500%) translateX(500%);
+  }
+}
+
+.rocket-animation {
+  animation: rocketTakeoff 10s forwards;
+  /* Adjust the duration as needed */
+}
+
+.custom-radio input[type="radio"] {
+  display: none;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-circle {
+  background-color: purple;
+  /* Change to the desired color */
+}
+
+/* Cloud.css */
+@keyframes moveCloud {
+  0% {
+    transform: translateX(10px);
+    /* Move 5px to the right */
+  }
+
+  50% {
+    transform: translateX(-10px);
+    /* Move 5px to the left */
+  }
+
+  100% {
+    transform: translateX(10px);
+    /* Move 5px to the right */
+  }
+}
+
+.cloud {
+  animation: moveCloud 5s linear infinite;
+  /* Apply animation to the cloud image */
+}
+
+.cloud-left {
+  animation: moveCloud 5s linear infinite reverse;
+  /* Apply animation to the cloudleft image */
+}
+
+
+@keyframes shrinkEnlarge {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.smallcloud {
+  animation: shrinkEnlarge 2s ease-in-out infinite;
+}
+
+@keyframes moveTruck {
+  from {
+    transform: translateX(50vw);
+    /* Start position: right end of the screen */
+  }
+
+  to {
+    transform: translateX(0%);
+    /* End position: center of the screen */
+  }
+}
+
+.moving-truck {
+  animation: moveTruck 3s ease forwards;
+  /* Change duration as needed */
+}
+
+.moving-truck {
+  height: auto;
+}
+
+/* Add this CSS to your stylesheet or component */
+@keyframes parcelLanding {
+  0% {
+    transform: translateY(-400%) translateX(0%);
+  }
+
+  /* 50% {
+    transform: translateY(-50%) translateX(50%) rotate(40deg);
+  } */
+  100% {
+    transform: translateY(0) translateX(-40%);
+  }
+}
+
+.parcel-animation {
+  animation: parcelLanding 4s forwards;
+  /* Adjust the duration as needed */
+}
+
+@keyframes moveTruck {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+.animate-truck {
+  animation: moveTruck 3s linear infinite;
+}
+
+/* Loading  */
+.loader-Outer-div {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ldsEllipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.ldsEllipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--green-main);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.ldsEllipsis div:nth-child(1) {
+  left: 8px;
+  animation: ldsEllipsis1 0.8s infinite;
+}
+.ldsEllipsis div:nth-child(2) {
+  left: 8px;
+  animation: ldsEllipsis2 0.8s infinite;
+}
+.ldsEllipsis div:nth-child(3) {
+  left: 32px;
+  animation: ldsEllipsis2 0.8s infinite;
+}
+.ldsEllipsis div:nth-child(4) {
+  left: 56px;
+  animation: ldsEllipsis3 0.8s infinite;
+}
+@keyframes ldsEllipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ldsEllipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes ldsEllipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
